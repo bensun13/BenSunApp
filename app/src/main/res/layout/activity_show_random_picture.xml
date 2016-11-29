@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <EditText android:id="@+id/edit_message"
-        android:layout_weight="1"
-        android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <EditText
+        android:id="@+id/edit_message"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/edit_message" />
-    <Button
-        android:layout_width="wrap_content"
+    <RadioGroup
+        android:id="@+id/radio_source"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:checkedButton="@+id/radio_reddit"
+        android:orientation="vertical">
+        <RadioButton
+            android:id="@+id/radio_reddit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reddit" />
+        <RadioButton
+            android:id="@+id/radio_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/google" />
+    </RadioGroup>
+    <Button
+        android:id="@+id/send_message"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:onClick="sendMessage"
         android:text="@string/button_send"
-        android:onClick="sendMessage" />
+        android:visibility="visible" />
+
 </LinearLayout>

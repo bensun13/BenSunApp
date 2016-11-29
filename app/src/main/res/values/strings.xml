@@ -3,4 +3,6 @@
     <string name="app_name">BenSunApp</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
+    <string name="reddit">Reddit</string>
+    <string name="google">Google</string>
 </resources>
